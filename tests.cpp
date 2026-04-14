@@ -1,8 +1,8 @@
 #include <vector>
 #include <array>
 
-#include "header/print_res.hpp" //WORKING
-#include "header/brick_sort.hpp"     //WORKING
+#include "header/print_res.hpp"     //WORKING
+#include "header/brick_sort.hpp"   //WORKING
 
 #define YES 1
 #define NO 0
