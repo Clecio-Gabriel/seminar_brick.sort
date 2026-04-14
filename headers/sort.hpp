@@ -1,3 +1,6 @@
+#ifndef SORT_HPP
+#define SORT_HPP
+
 #include <iterator>
 #include <algorithm>
 
@@ -36,3 +39,5 @@ void brick_sort(Itr first, Itr last){
     }
     
 }
+
+#endif

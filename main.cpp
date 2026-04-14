@@ -1,4 +1,5 @@
 #include <vector>
+#include <array>
 
 #include "headers/print_res.hpp" //WORKING
 #include "headers/sort.hpp"     //WORKING
@@ -13,18 +14,18 @@
 
 int main(){
 
-    #ifndef VECTOR
+    #if VECTOR
     std::vector <int> vec {42, 7, 100, 19, 3, 88, 12, 1, 55, 24, 9, 67, 15, 31, 5, 20, 11, 4, 14, 2};
     print_msg("COM VETOR:\nVetor original:\n", vec.cbegin(), vec.cend());
     brick_sort(vec.begin(), vec.end());
     print_msg("Vetor ordenado:\n",vec.cbegin(), vec.cend());
     #endif
 
-    #ifndef ARRAY
+    #if ARRAY
 
     #endif
 
-    #ifndef STRING
+    #if STRING
     string str = "como funciona?";
     print_msg("COM STRING:\nString original:\n", str.begin(), str.end());
     brick_sort(str.begin(), str.end());
