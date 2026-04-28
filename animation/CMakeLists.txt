@@ -5,7 +5,7 @@ set(TEST_ANI "animate")
 
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
 
-add_subdirectory(src/main)
+add_executable(${TEST_ANI} src/main/teste.cpp)
 
 target_link_libraries(${TEST_ANI} 
     ${CMAKE_SOURCE_DIR}/src/lib/libsfml-graphics.so
@@ -16,8 +16,12 @@ target_link_libraries(${TEST_ANI}
     ${CMAKE_SOURCE_DIR}/src/lib/libsfml-system.so.3.1
 )
 
-# Configura o local onde o .exe será gerado
 set_target_properties(
     ${TEST_ANI} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+)
+
+add_custom_target(
+    run_test
+    COMMAND ${TEST_ANI}
 )
